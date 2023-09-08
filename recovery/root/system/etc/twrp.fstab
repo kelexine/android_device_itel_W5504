@@ -1,0 +1,19 @@
+# mount point	fstype		device
+#twrp.fstab
+/misc               emmc    	/dev/block/mmcblk0p4              
+/boot               emmc    	/dev/block/mmcblk0p26           flags=backup=1;flashimg;display="boot"
+/recovery           emmc    	/dev/block/mmcblk0p3            flags=flashimg;backup=1;display="recovery"
+/system             ext4    	/dev/block/mmcblk0p27           flags=flashimg;backup=1;display="system" 
+/data               f2fs    	/dev/block/mmcblk0p37           flags=flashimg;backup=1;display="data"
+/cache              ext4    	/dev/block/mmcblk0p28           flags=backup=1                
+/vbmeta				emmc		/dev/block/mmcblk0p31			flags=flashimg;backup=1;display="vbmeta"
+/vendor				ext4		/dev/block/mmcblk0p29			flags=flashimg;backup=1;display="vendor"
+/persist			emmc		/dev/block/mmcblk0p18			flags=flashimg;display="persist"
+/logo				emmc		/dev/block/mmcblk0p12			flags=backup=1
+/fbootlogo			emmc		/dev/block/mmcblk0p13			flags=backup=1
+/chargelogo			emmc		/dev/block/mmcblk0p33			flags=backup=1
+/chargeremind		emmc		/dev/block/mmcblk0p34			flags=backup=1
+
+/sdcard 			ext4		/data/media/0					flags=display="Media Storage";usermrf;backup=1
+/external_sd    	vfat		/dev/block/mmcblk1p1  		flags=removable;storage;display="SD CARD"
+/usb-otg            vfat	    /dev/block/sda1	/dev/block/sda      flags=removable;storage;display="USB OTG"
